@@ -1,3 +1,31 @@
 <h1>
-  {{title}}
+  {{ myObject.location }}
 </h1>
+
+<h1 [class]="titleClass">Hello1!</h1>
+<h1 [class.red-title]="titleClass2">Hello2!</h1>
+<h1 [ngClass]="titleClasses">Hello3!</h1>
+<h1 [style.color]="titleStyle">Hello4!</h1>
+<h1 [style.color]="titleStyle2 ? 'green' : 'pink'">Hello5!</h1>
+<h1 [ngStyle]="titleStyles">Hello6!</h1>
+
+<ul>
+	<li *ngFor="let arr of myArr"> {{ arr }}</li>
+	<li *ngIf="myArr; else otherTmpl">She exists</li>
+</ul>
+
+<ng-template #otherTmpl> No, she don't </ng-template>
+
+<app-my-new-component></app-my-new-component>
+
+<button [disabled]="buttonStatus == 'disabled'">My Button</button>
+
+<button (mouseenter) = "myEvent($event)">My second button</button>
+
+<p>{{ someProperty }}</p>
+
+<p [class]="animateBox" [@myAnimation]='state' (click)='animateMe()'>I will animate</p>
+
+<p [class]="animateBox" [@myAnimation2]='state' (click)='animateMe()'>I will also animate</p>
+
+<app-my-button></app-my-button>
