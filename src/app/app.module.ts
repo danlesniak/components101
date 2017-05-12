@@ -9,12 +9,14 @@ import { DataService } from './data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyButtonComponent } from './my-button/my-button.component';
+import { MainTabsetComponent } from './main-tabset/main-tabset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNewComponentComponent,
-    MyButtonComponent
+    MyButtonComponent,
+    MainTabsetComponent
   ],
   imports: [
     BrowserModule,
